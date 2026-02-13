@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeresKoding - Jasa Coding HTML CSS JS Profesional</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Roboto:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- VS Code Layout Wrapper -->
+    <div class="vscode-app">
+        <!-- Activity Bar (Left) -->
+        <div class="activity-bar-main">
+            <div class="ab-logo">
+                <i class="fas fa-code"></i>
+            </div>
+            <div class="ab-items">
+                <div class="ab-item active" data-section="home" title="Home">
+                    <i class="fas fa-home"></i>
+                </div>
+                <div class="ab-item" data-section="services" title="Services">
+                    <i class="fas fa-briefcase"></i>
+                </div>
+                <div class="ab-item" data-section="about" title="About">
+                    <i class="fas fa-info-circle"></i>
+                </div>
+                <div class="ab-item" data-section="contact" title="Contact">
+                    <i class="fas fa-envelope"></i>
+                </div>
+            </div>
+            <div class="ab-bottom">
+                <button class="theme-toggle" id="themeToggle" title="Toggle Dark/Light Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Main Content Area -->
+        <div class="editor-main">
+            <!-- Header Bar with Logo & Tabs -->
+            <div class="editor-header-bar">
+                <div class="logo-header">
+                    <i class="fas fa-code"></i>
+                    <span>BeresKoding</span>
+                </div>
+                <div class="content-tabs">
+                    <div class="tab active" data-tab="home">
+                        <i class="fas fa-home"></i>
+                        <span>Home</span>
+                    </div>
+                    <div class="tab" data-tab="services">
+                        <i class="fas fa-briefcase"></i>
+                        <span>Services</span>
+                    </div>
+                    <div class="tab" data-tab="about">
+                        <i class="fas fa-info-circle"></i>
+                        <span>About</span>
+                    </div>
+                    <div class="tab" data-tab="contact">
+                        <i class="fas fa-envelope"></i>
+                        <span>Contact</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Breadcrumb -->
+            <div class="breadcrumb-main">
+                <span>BeresKoding / Code Solutions</span>
+            </div>
+
+            <!-- Main Content Panels -->
+            <div class="editor-content">
+                <!-- HOME SECTION -->
+                <section class="content-section active" id="home-section" data-section="home">
+                    <!-- Decorative background elements -->
+                    <div class="hero-decoration hero-deco-1"></div>
+                    <div class="hero-decoration hero-deco-2"></div>
+                    <div class="hero-decoration hero-deco-3"></div>
+                    
+                    <div class="section-container">
+                        <div class="hero-wrapper">
+                            <div class="hero-left">
+                                <div class="hero-badge">
+                                    <i class="fas fa-zap"></i>
+                                    <span>Professional Code Solutions</span>
+                                </div>
+                                
+                                <h1 class="hero-title">
+                                    Build Your
+                                    <span class="gradient-text">Perfect Website</span>
+                                    <span class="title-break">Today</span>
+                                </h1>
+                                
+                                <p class="hero-subtitle">
+                                    We build clean, fast, and responsive static websites using HTML, CSS, and JavaScript. No backend or CMS.
+                                </p>
+                                
+                                <div class="hero-stats">
+                                    <div class="stat">
+                                        <div class="stat-value">∞</div>
+                                        <div class="stat-label">Passion</div>
+                                    </div>
+                                    <div class="stat">
+                                        <div class="stat-value">0</div>
+                                        <div class="stat-label">Excuses</div>
+                                    </div>
+                                    <div class="stat">
+                                        <div class="stat-value">💯</div>
+                                        <div class="stat-label">Komitmen</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="cta-group">
+                                    <a href="https://wa.me/6288210565665?text=Halo%20BeresKoding,%20saya%20ingin%20memulai%20project" 
+                                       class="btn btn-primary" target="_blank">
+                                       <i class="fab fa-whatsapp"></i> Start Your Project
+                                    </a>
+                                    <button class="btn btn-outline" onclick="document.querySelector('[data-tab=services]').click()">
+                                        <i class="fas fa-arrow-right"></i> Learn More
+                                    </button>
+                                </div>
+                                
+                                <div class="hero-tech-stack">
+                                    <span class="tech-label">Tech Stack:</span>
+                                    <div class="tech-icons">
+                                        <span class="tech-icon" title="HTML5">HTML5</span>
+                                        <span class="tech-icon" title="CSS3">CSS3</span>
+                                        <span class="tech-icon" title="JavaScript">JS</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="hero-right">
+                                <div class="hero-visual">
+                                    <div class="code-card code-card-1">
+                                        <div class="code-header">index.html</div>
+                                        <div class="code-line"><span class="keyword">&lt;html&gt;</span></div>
+                                        <div class="code-line"><span class="keyword">&lt;head&gt;</span></div>
+                                        <div class="code-line" style="margin-left: 20px;"><span class="tag">&lt;title&gt;</span>BeresKoding<span class="tag">&lt;/title&gt;</span></div>
+                                        <div class="code-line"><span class="keyword">&lt;/head&gt;</span></div>
+                                        <div class="code-line">...</div>
+                                    </div>
+                                    
+                                    <div class="code-card code-card-2">
+                                        <div class="code-header">style.css</div>
+                                        <div class="code-line"><span class="selector">.hero</span> {</div>
+                                        <div class="code-line" style="margin-left: 20px;"><span class="property">background</span>: gradient;</div>
+                                        <div class="code-line" style="margin-left: 20px;"><span class="property">color</span>: modern;</div>
+                                        <div class="code-line">}</div>
+                                    </div>
+                                    
+                                    <div class="code-card code-card-3">
+                                        <div class="code-header">script.js</div>
+                                        <div class="code-line"><span class="keyword">const</span> <span class="variable">quality</span> = <span class="string">"100%"</span>;</div>
+                                        <div class="code-line"><span class="keyword">const</span> <span class="variable">fast</span> = <span class="keyword">true</span>;</div>
+                                        <div class="code-line"><span class="function">deliver</span>(<span class="variable">quality</span>);</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SERVICES SECTION -->
+                <section class="content-section" id="services-section" data-section="services">
+                    <div class="section-container">
+                        <h2 class="section-title">Our Services</h2>
+                        <p class="section-subtitle">Front-end services for static HTML/CSS/JS websites</p>
+                        
+                        <div class="services-grid">
+                            <div class="service-card">
+                                <div class="card-header">
+                                    <div class="service-icon" style="--bg-color: #238636;">
+                                        <i class="fas fa-code"></i>
+                                    </div>
+                                    <h3>Web Development</h3>
+                                </div>
+                                <p>Build static websites from scratch using HTML5, CSS3, and vanilla JavaScript. Clean, semantic code that's easy to maintain.</p>
+                                <div class="card-footer">
+                                    <span class="badge">HTML</span>
+                                    <span class="badge">CSS</span>
+                                    <span class="badge">JavaScript</span>
+                                </div>
+                            </div>
+
+                            <div class="service-card">
+                                <div class="card-header">
+                                    <div class="service-icon" style="--bg-color: #58a6ff;">
+                                        <i class="fas fa-wand-magic-sparkles"></i>
+                                    </div>
+                                    <h3>Animations & Effects</h3>
+                                </div>
+                                <p>Bring your interfaces to life with smooth animations, transitions, and interactive elements that delight users.</p>
+                                <div class="card-footer">
+                                    <span class="badge">CSS Animations</span>
+                                    <span class="badge">JavaScript</span>
+                                    <span class="badge">Interactions</span>
+                                </div>
+                            </div>
+
+                            <div class="service-card">
+                                <div class="card-header">
+                                    <div class="service-icon" style="--bg-color: #3b8686;">
+                                        <i class="fas fa-mobile-screen-button"></i>
+                                    </div>
+                                    <h3>Responsive Design</h3>
+                                </div>
+                                <p>Websites that look amazing on all devices. Mobile-first approach ensuring perfect experience on phones, tablets, and desktops.</p>
+                                <div class="card-footer">
+                                    <span class="badge">Mobile-First</span>
+                                    <span class="badge">Flexible Grid</span>
+                                    <span class="badge">Touch-Ready</span>
+                                </div>
+                            </div>
+
+                            <div class="service-card">
+                                <div class="card-header">
+                                    <div class="service-icon" style="--bg-color: #a371f7;">
+                                        <i class="fas fa-bolt"></i>
+                                    </div>
+                                    <h3>Performance Optimization</h3>
+                                </div>
+                                <p>Faster load times through minification, asset optimization, and front-end best practices. Every millisecond counts.</p>
+                                <div class="card-footer">
+                                    <span class="badge">Minification</span>
+                                    <span class="badge">SEO</span>
+                                    <span class="badge">Speed</span>
+                                </div>
+                            </div>
+
+                            <div class="service-card">
+                                <div class="card-header">
+                                    <div class="service-icon" style="--bg-color: #f0883e;">
+                                        <i class="fas fa-paint-brush"></i>
+                                    </div>
+                                    <h3>UI/UX Design</h3>
+                                </div>
+                                <p>Beautiful, intuitive interfaces for static sites. Modern aesthetics combined with usability and accessibility.</p>
+                                <div class="card-footer">
+                                    <span class="badge">UI Design</span>
+                                    <span class="badge">UX</span>
+                                    <span class="badge">Accessibility</span>
+                                </div>
+                            </div>
+
+                            <div class="service-card">
+                                <div class="card-header">
+                                    <div class="service-icon" style="--bg-color: #ff6b9d;">
+                                        <i class="fas fa-crown"></i>
+                                    </div>
+                                    <h3>Custom Solutions</h3>
+                                </div>
+                                <p>Tailored static pages for your needs. From landing pages to company profiles and portfolios.</p>
+                                <div class="card-footer">
+                                    <span class="badge">Custom</span>
+                                    <span class="badge">Scalable</span>
+                                    <span class="badge">Enterprise</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ABOUT SECTION --> 
+                <section class="content-section" id="about-section" data-section="about">
+                    <div class="section-container">
+                        <h2 class="section-title">Why Choose BeresKoding</h2>
+                        <p class="section-subtitle">Front-end expertise with clean HTML/CSS/JS delivery</p>
+                        
+                        <div class="about-content">
+                            <div class="about-points">
+                                <div class="about-point">
+                                    <div class="point-number">01</div>
+                                    <div>
+                                        <h3>Professional Expertise</h3>
+                                        <p>Dedicated to building high-quality front-end websites with clean HTML/CSS/JS standards.</p>
+                                    </div>
+                                </div>
+                                <div class="about-point">
+                                    <div class="point-number">02</div>
+                                    <div>
+                                        <h3>Modern Technologies</h3>
+                                        <p>Focused on modern HTML, CSS, and JavaScript standards for static websites.</p>
+                                    </div>
+                                </div>
+                                <div class="about-point">
+                                    <div class="point-number">03</div>
+                                    <div>
+                                        <h3>Responsive & Fast</h3>
+                                        <p>Every project is optimized for front-end performance and works across all screen sizes.</p>
+                                    </div>
+                                </div>
+                                <div class="about-point">
+                                    <div class="point-number">04</div>
+                                    <div>
+                                        <h3>Client Focused</h3>
+                                        <p>Your success is our success. We work closely with you to understand and exceed your expectations.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="about-stats">
+                                <div class="stat-item">
+                                    <div class="stat-number">📱</div>
+                                    <div class="stat-label">Responsive Design</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-number">⚡</div>
+                                    <div class="stat-label">Lightning Fast</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-number">💡</div>
+                                    <div class="stat-label">Creative Solutions</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-number">🤝</div>
+                                    <div class="stat-label">Collaborative</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- CONTACT SECTION --> 
+                <section class="content-section" id="contact-section" data-section="contact">
+                    <div class="contact-background-decoration"></div>
+                    <div class="section-container">
+                        <h2 class="section-title">Contact Us</h2>
+                        <p class="section-subtitle">Get in touch with our beautiful team for your next project</p>
+                        
+                        <!-- Contact Cards Grid -->
+                        <div class="contact-methods">
+                            <div class="contact-card">
+                                <div class="contact-icon-wrapper">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <h3>Email</h3>
+                                <p>bereskoding@gmail.com</p>
+                                <a href="mailto:bereskoding@gmail.com" class="contact-link">
+                                    <i class="fas fa-arrow-right"></i> Send Message
+                                </a>
+                            </div>
+                            
+                            <div class="contact-card">
+                                <div class="contact-icon-wrapper">
+                                    <i class="fab fa-whatsapp"></i>
+                                </div>
+                                <h3>WhatsApp</h3>
+                                <p>Available 24/7</p>
+                                <a href="https://wa.me/6288210565665" class="contact-link" target="_blank">
+                                    <i class="fas fa-arrow-right"></i> Chat Now
+                                </a>
+                            </div>
+
+                            <div class="contact-card">
+                                <div class="contact-icon-wrapper">
+                                    <i class="fab fa-instagram"></i>
+                                </div>
+                                <h3>Instagram</h3>
+                                <p>@bereskoding</p>
+                                <a href="https://instagram.com/bereskoding" class="contact-link" target="_blank">
+                                    <i class="fas fa-arrow-right"></i> Follow Us
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Contact Form Section -->
+                        <div class="contact-form-wrapper">
+                            <div class="form-header">
+                                <h3 class="form-title">Or Send Us a Message</h3>
+                                <p class="form-subtitle">Tell us about your project and we'll get back to you soon</p>
+                            </div>
+                            <form class="contact-form" id="contactForm" action="mailto:bereskoding@gmail.com" method="post" enctype="text/plain">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="user_name">Full Name</label>
+                                        <input type="text" id="user_name" name="user_name" required placeholder="Your name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="user_email">Email</label>
+                                        <input type="email" id="user_email" name="user_email" required placeholder="your.email@example.com">
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="project_type">Project Type</label>
+                                    <select id="project_type" name="project_type" required>
+                                        <option value="">Select project type...</option>
+                                        <option value="Website Development">Website Development</option>
+                                        <option value="E-commerce">E-commerce</option>
+                                        <option value="Landing Page">Landing Page</option>
+                                        <option value="Website Redesign">Website Redesign</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="message">Project Details</label>
+                                    <textarea id="message" name="message" rows="5" placeholder="Tell us about your project..."></textarea>
+                                </div>
+                                
+                                <button type="submit" class="btn btn-primary" id="submitBtn">
+                                    <i class="fas fa-paper-plane"></i> Send Message
+                                </button>
+                                <div class="form-status" id="formStatus"></div>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+
+            <!-- Status Bar -->
+            <div class="status-bar-main">
+                <span class="status-item">Ready to Code</span>
+                <span class="status-spacer"></span>
+                <span class="status-item">BeresKoding v1.0</span>
+                <span class="status-item">Web Solutions</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chatbot -->
+    <div class="chatbot-container hidden">
+        <div class="chatbot-header">
+            <div class="chatbot-title">
+                <i class="fas fa-headset"></i>
+                <span>BeresKoding Assistant</span>
+            </div>
+            <button class="chatbot-minimize" id="chatbotMinimize">
+                <i class="fas fa-minus"></i>
+            </button>
+        </div>
+        <div class="chatbot-messages" id="chatbotMessages">
+            <div class="chat-message bot-message">
+                <div class="message-content">
+                    <p>Halo! 👋 Saya bisa bantu soal layanan, harga, kontak, portfolio, dan proses kerja. Ketik /help untuk daftar lengkap.</p>
+                </div>
+            </div>
+        </div>
+        <div class="chatbot-quick-replies" id="chatbotQuickReplies" aria-label="Quick replies"></div>
+        <div class="chatbot-input-area">
+            <input type="text" id="chatbotInput" class="chatbot-input" placeholder="Contoh: Apa layanan kalian? (atau ketik /help)" />
+            <button class="chatbot-send" id="chatbotSend">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <button class="chatbot-toggle" id="chatbotToggle">
+        <i class="fas fa-comments"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
