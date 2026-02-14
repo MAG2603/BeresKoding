@@ -217,6 +217,30 @@ body.light-mode {
     color: var(--primary-color);
 }
 
+/* Theme Toggle Mobile (Hidden by default, shown on mobile) */
+.theme-toggle-mobile {
+    display: none;
+    background: none;
+    border: 2px solid var(--border-color);
+    color: var(--text-primary);
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    margin-right: 12px;
+}
+
+.theme-toggle-mobile:hover {
+    background-color: var(--dark-bg-secondary);
+    border-color: var(--secondary-color);
+    color: var(--secondary-color);
+    transform: rotate(180deg) scale(1.1);
+}
+
 /* Content Tabs */
 .content-tabs {
     display: flex;
@@ -1954,38 +1978,54 @@ body.light-mode {
     .editor-header-bar {
         flex-wrap: wrap;
         gap: 0;
+        padding-right: 8px;
     }
 
     .logo-header {
-        width: 100%;
-        justify-content: center;
+        width: auto;
+        flex: 1;
+        justify-content: flex-start;
         border-right: none;
         border-bottom: 1px solid var(--border-color);
+        padding: 12px 16px;
     }
 
     .content-tabs {
         width: 100%;
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
+        justify-content: space-around;
     }
 
     .tab {
-        padding: 10px 12px;
-        font-size: 0.8rem;
-    }
-
-    .activity-bar-main {
-        width: 50px;
-        height: 100vh;
-        flex-direction: column;
-        padding: 16px 0;
-        border-right: 1px solid var(--border-color);
-        border-bottom: none;
-    }
-
-    .ab-items {
-        flex-direction: column;
+        padding: 12px 16px;
+        font-size: 1.2rem;
         flex: 1;
+        justify-content: center;
+    }
+
+    /* Hide text in tabs on mobile, show icons only */
+    .tab span {
+        display: none;
+    }
+
+    .tab i {
+        margin: 0;
+    }
+
+    /* Hide activity bar on mobile to save space */
+    .activity-bar-main {
+        display: none;
+    }
+
+    /* Show mobile theme toggle */
+    .theme-toggle-mobile {
+        display: flex;
+    }
+
+    /* Make editor take full width on mobile */
+    .editor-main {
+        width: 100%;
     }
 
     .editor-content {

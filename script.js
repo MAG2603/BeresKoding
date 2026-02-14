@@ -1,5 +1,6 @@
 // ===== DARK MODE / LIGHT MODE TOGGLE =====
 const themeToggle = document.getElementById('themeToggle');
+const themeToggleMobile = document.getElementById('themeToggleMobile');
 const body = document.body;
 
 // Check if user has saved theme preference
@@ -9,20 +10,32 @@ applyTheme(savedTheme);
 function applyTheme(theme) {
     if (theme === 'light') {
         body.classList.add('light-mode');
-        themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        const icon = '<i class="fas fa-sun"></i>';
+        if (themeToggle) themeToggle.innerHTML = icon;
+        if (themeToggleMobile) themeToggleMobile.innerHTML = icon;
         localStorage.setItem('theme', 'light');
     } else {
         body.classList.remove('light-mode');
-        themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        const icon = '<i class="fas fa-moon"></i>';
+        if (themeToggle) themeToggle.innerHTML = icon;
+        if (themeToggleMobile) themeToggleMobile.innerHTML = icon;
         localStorage.setItem('theme', 'dark');
     }
 }
 
-themeToggle.addEventListener('click', () => {
+function toggleTheme() {
     const currentTheme = body.classList.contains('light-mode') ? 'light' : 'dark';
     const newTheme = currentTheme === 'light' ? 'dark' : 'light';
     applyTheme(newTheme);
-});
+}
+
+// Add event listeners to both toggle buttons
+if (themeToggle) {
+    themeToggle.addEventListener('click', toggleTheme);
+}
+if (themeToggleMobile) {
+    themeToggleMobile.addEventListener('click', toggleTheme);
+}
 
 // ===== SINGLE PAGE WITH SMOOTH SCROLL NAVIGATION =====
 function initNavigation() {
@@ -30,9 +43,6 @@ function initNavigation() {
     const abItems = document.querySelectorAll('.ab-item');
     const contentSections = document.querySelectorAll('.content-section');
     const editorContent = document.querySelector('.editor-content');
-
-    console.log('🚀 Initializing Navigation');
-    console.log('Found sections:', contentSections.length);
 
     function updateActiveTab() {
         // Determine which section is currently in view
@@ -79,7 +89,6 @@ function initNavigation() {
                 top: sectionTop,
                 behavior: 'smooth'
             });
-            console.log('📍 Scrolled to:', sectionName);
         }
     }
 
@@ -87,7 +96,6 @@ function initNavigation() {
     tabs.forEach(tab => {
         tab.addEventListener('click', () => {
             const sectionName = tab.getAttribute('data-tab');
-            console.log('🖱️ Tab clicked:', sectionName);
             scrollToSection(sectionName);
         });
     });
@@ -96,7 +104,6 @@ function initNavigation() {
     abItems.forEach(item => {
         item.addEventListener('click', () => {
             const sectionName = item.getAttribute('data-section');
-            console.log('🖱️ Activity bar clicked:', sectionName);
             scrollToSection(sectionName);
         });
     });
@@ -105,7 +112,6 @@ function initNavigation() {
     editorContent.addEventListener('scroll', updateActiveTab, { passive: true });
 
     // Initial update
-    console.log('⏳ Initializing navigation state');
     updateActiveTab();
 }
 
@@ -156,8 +162,6 @@ document.querySelectorAll('.service-card').forEach(card => {
 });
 
 // ===== CONSOLE MESSAGE =====
-console.log('%c🚀 BeresKoding', 'font-size: 20px; color: #238636; font-weight: bold;');
-console.log('%cModern Web Solutions - VS Code Edition', 'font-size: 14px; color: #58a6ff;');
 // ===== CONTACT FORM (MAILTO) =====
 const contactForm = document.getElementById('contactForm');
 const formStatus = document.getElementById('formStatus');
