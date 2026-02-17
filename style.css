@@ -921,6 +921,11 @@ body.light-mode {
     background-clip: text;
     animation: gradientShift 4s ease infinite;
     flex-shrink: 0;
+    min-width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
 }
 
 .about-stats {
@@ -1141,7 +1146,7 @@ body.light-mode {
     border-top: 2px solid rgba(35, 134, 54, 0.3);
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     font-size: 0.75rem;
     color: rgba(248, 248, 242, 0.8);
     font-family: 'JetBrains Mono', monospace;
@@ -1970,7 +1975,29 @@ body.light-mode {
 
 
 /* ===== RESPONSIVE DESIGN ===== */
+/* Disable hover effects on touch devices to prevent layout shift */
+@media (hover: none) {
+    .service-card:hover,
+    .about-point:hover,
+    .tab:hover,
+    .ab-item:hover,
+    .code-card:hover,
+    .stat-item:hover,
+    .badge:hover,
+    .btn:hover,
+    .contact-card:hover,
+    .service-icon:hover,
+    .stat-item:hover {
+        transform: none;
+    }
+}
+
 @media (max-width: 768px) {
+    /* Prevent scrollbar flickering on mobile - allocate space for scrollbar */
+    .editor-content {
+        scrollbar-gutter: stable;
+    }
+
     .vscode-app {
         flex-direction: row;
     }
@@ -2034,6 +2061,11 @@ body.light-mode {
 
     .content-section {
         padding: 30px 20px;
+    }
+
+    .content-section.active {
+        border-left: none;
+        padding-left: 20px;
     }
 
     .hero-wrapper {
@@ -2140,6 +2172,29 @@ body.light-mode {
     /* Testimonials tablet */
     .testimonials-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Status bar responsive for tablet */
+    .status-bar-main {
+        padding: 6px 12px;
+        font-size: 0.65rem;
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    .status-item {
+        padding: 3px 8px;
+        font-size: 0.65rem;
+    }
+
+    .status-spacer {
+        flex-basis: 100%;
+        display: none;
+    }
+
+    .status-item:nth-child(3),
+    .status-item:nth-child(4) {
+        display: none;
     }
 }
 
@@ -2588,6 +2643,9 @@ body.light-mode .point-number {
     color: #1f2937 !important;
     background: rgba(35, 134, 54, 0.12) !important;
     border-color: rgba(35, 134, 54, 0.3) !important;
+    background-clip: unset !important;
+    -webkit-background-clip: unset !important;
+    -webkit-text-fill-color: unset !important;
 }
 
 /* Contact icons */
@@ -4859,6 +4917,22 @@ body.light-mode .contact-form .btn:hover {
         height: 70vh;
         max-width: 350px;
         max-height: 500px;
+    }
+
+    /* Status bar responsive for small mobile */
+    .status-bar-main {
+        padding: 4px 8px;
+        font-size: 0.55rem;
+        gap: 8px;
+    }
+
+    .status-item {
+        padding: 2px 6px;
+        font-size: 0.55rem;
+    }
+
+    .status-item:hover {
+        transform: none;
     }
 }
 
