@@ -417,7 +417,7 @@ body.light-mode {
     grid-template-columns: 1fr 1fr;
     gap: 60px;
     align-items: center;
-    padding: 20px 0 30px 0;
+    padding: 0px 0 30px 0;
     position: relative;
     z-index: 1;
 }
@@ -2060,18 +2060,18 @@ body.light-mode {
     }
 
     .content-section {
-        padding: 30px 20px;
+        padding: 16px 12px;
     }
 
     .content-section.active {
         border-left: none;
-        padding-left: 20px;
+        padding-left: 12px;
     }
 
     .hero-wrapper {
         grid-template-columns: 1fr;
-        gap: 40px;
-        padding: 60px 0 80px 0;
+        gap: 18px;
+        padding: 28px 0 40px 0;
     }
 
     .hero-title {
@@ -2079,7 +2079,7 @@ body.light-mode {
     }
 
     .hero-right {
-        height: 350px;
+        height: 260px;
     }
 
     .code-card {
@@ -4666,7 +4666,7 @@ body.light-mode .contact-form .btn:hover {
 @media (max-width: 768px) {
     .hero-wrapper {
         grid-template-columns: 1fr;
-        gap: 40px;
+        gap: 18px;
     }
 
     .vscode-container {
@@ -4729,7 +4729,7 @@ body.light-mode .contact-form .btn:hover {
     }
 
     .hero-stats {
-        gap: 30px;
+        gap: 14px;
     }
 
     .hero-stats .stat h3 {
@@ -4788,8 +4788,8 @@ body.light-mode .contact-form .btn:hover {
 
     .hero-stats {
         flex-direction: row;
-        gap: 15px;
-        padding: 20px;
+        gap: 8px;
+        padding: 8px;
     }
 
     .stat-value {
@@ -4806,13 +4806,13 @@ body.light-mode .contact-form .btn:hover {
     }
 
     .btn {
-        padding: 12px 24px;
+        padding: 8px 16px;
         font-size: 0.9rem;
         width: 100%;
     }
 
     .tech-icons {
-        gap: 8px;
+        gap: 4px;
     }
 
     .tech-icon {
