@@ -525,13 +525,42 @@ chatbotMinimize.addEventListener('click', () => {
 });
 
 // Send message on button click
-chatbotSend.addEventListener('click', sendMessage);
+chatbotSend.addEventListener('click', () => {
+    sendMessage();
+    // On mobile, keep input focused so keyboard stays open
+    if (window.innerWidth <= 768) {
+        setTimeout(() => chatbotInput.focus(), 100);
+    }
+});
 
 // Send message on Enter key
 chatbotInput.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') {
         sendMessage();
+        // On mobile, keep input focused so keyboard stays open
+        if (window.innerWidth <= 768) {
+            setTimeout(() => chatbotInput.focus(), 100);
+        }
     }
 });
+// Ensure chatbot-toggle stays at the bottom on mobile, even when keyboard is open
+function fixChatbotTogglePosition() {
+    if (window.innerWidth <= 768) {
+        chatbotToggle.style.position = 'fixed';
+        chatbotToggle.style.bottom = '16px';
+        chatbotToggle.style.right = '16px';
+        chatbotToggle.style.left = 'auto';
+        chatbotToggle.style.zIndex = '9999';
+    } else {
+        chatbotToggle.style.position = '';
+        chatbotToggle.style.bottom = '';
+        chatbotToggle.style.right = '';
+        chatbotToggle.style.left = '';
+        chatbotToggle.style.zIndex = '';
+    }
+}
+window.addEventListener('resize', fixChatbotTogglePosition);
+window.addEventListener('orientationchange', fixChatbotTogglePosition);
+fixChatbotTogglePosition();
 
 renderQuickReplies();
