@@ -525,22 +525,12 @@ chatbotMinimize.addEventListener('click', () => {
 });
 
 // Send message on button click
-chatbotSend.addEventListener('click', () => {
-    sendMessage();
-    // On mobile, keep input focused so keyboard stays open
-    if (window.innerWidth <= 768) {
-        setTimeout(() => chatbotInput.focus(), 100);
-    }
-});
+chatbotSend.addEventListener('click', sendMessage);
 
 // Send message on Enter key
 chatbotInput.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') {
         sendMessage();
-        // On mobile, keep input focused so keyboard stays open
-        if (window.innerWidth <= 768) {
-            setTimeout(() => chatbotInput.focus(), 100);
-        }
     }
 });
 // Ensure chatbot-toggle stays at the bottom on mobile, even when keyboard is open

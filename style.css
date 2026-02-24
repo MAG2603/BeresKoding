@@ -4953,9 +4953,11 @@ body.light-mode .contact-form .btn:hover {
         z-index: 9999;
     }
     .chatbot-toggle {
-        bottom: 62vh !important;
+        position: fixed !important;
+        bottom: 16px !important;
         right: 16px !important;
         left: auto !important;
+        z-index: 10000 !important;
     }
 
     /* Status bar responsive for small mobile */
