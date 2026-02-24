@@ -79,48 +79,45 @@ body.light-mode {
     border-right: 1px solid var(--border-color);
     display: flex;
     flex-direction: column;
+    align-items: center;
+    padding: 16px 0;
+    gap: 16px;
+}
 
-    .hero-visual {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        min-height: 340px;
-        display: flex;
-        flex-direction: row;
-        align-items: flex-end;
-        justify-content: center;
-        gap: 18px;
-    }
 .ab-logo {
-
-    .code-card {
-        position: static;
-        padding: 18px 16px;
-        background: linear-gradient(135deg, rgba(13, 17, 23, 0.8) 0%, rgba(35, 134, 54, 0.05) 100%);
-        border: 1.5px solid rgba(35, 134, 54, 0.3);
-        border-radius: 14px;
-        backdrop-filter: blur(10px);
-        font-family: 'JetBrains Mono', monospace;
-        font-size: 0.9rem;
-        line-height: 1.6;
-        color: var(--text-secondary);
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
-        transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-        min-width: 180px;
-        max-width: 220px;
-        margin-bottom: 0;
-    }
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #238636, #2ea043);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 12px rgba(35, 134, 54, 0.4), 0 0 20px rgba(35, 134, 54, 0.2);
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    margin-bottom: 10px;
+    position: relative;
     overflow: hidden;
+}
 
-    .code-card-1,
-    .code-card-2,
-    .code-card-3 {
-        width: 100%;
-        min-width: 180px;
-        max-width: 220px;
-        margin: 0;
-        animation: none;
-    }
+.ab-logo::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.2) 50%, transparent 70%);
+    transform: translateX(-100%);
+    transition: transform 0.6s ease;
+}
+
+.ab-logo:hover {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 8px 24px rgba(35, 134, 54, 0.6), 0 0 30px rgba(35, 134, 54, 0.3);
+}
+
+.ab-logo:hover::before {
+    transform: translateX(100%);
 }
 
 .ab-items {
@@ -1996,6 +1993,19 @@ body.light-mode {
 }
 
 @media (max-width: 768px) {
+        .code-card-1 {
+            left: 0;
+            top: 0;
+        }
+        .code-card-2 {
+            right: 0;
+            top: 80px;
+        }
+        .code-card-3 {
+            left: 40px;
+            bottom: 20px;
+            top: auto;
+        }
     /* Prevent scrollbar flickering on mobile - allocate space for scrollbar */
     .editor-content {
         scrollbar-gutter: stable;
