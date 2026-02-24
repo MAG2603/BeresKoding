@@ -477,7 +477,10 @@ function sendMessage() {
     
     // Add user message
     addMessage(message, 'user');
-    chatbotInput.value = '';
+    // Jangan kosongkan input di mobile agar keyboard tidak tertutup otomatis
+    if (window.innerWidth > 768) {
+        chatbotInput.value = '';
+    }
     
     // Simulate bot typing
     setTimeout(() => {
